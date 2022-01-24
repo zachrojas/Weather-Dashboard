@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Weather Dashboard</title>
-  </head>
-  <body>
-      
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<!-- This is the title dashboard at the top of the screen -->
+
+<body>
+  <header class="container-fluid text-center text-white bg-dark p-2">
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <!-- This is where you search for a city -->
+
+  <div class="container">
+    <div class="col-4 bg-light">
+    <input type="text" placeholder="Search for a city" class="input_text">
+    <input type="submit" value="Submit" class="submit">
+    </div>
+  </div>
+
+  <!-- This area will display your search history and will feature a 'clear history' button -->
+
+  <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+  <form id="history"></form>
+
+  <!-- This is where the current weather will display -->
+
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
+  </div>
+
+  <!-- This is where you can see the 5 day forecast -->
+
   <script src="script.js"></script>
-  </body>
-  <footer>Zach Rojas 2021</Footer>
-  </html>
+</body>
+</html>
